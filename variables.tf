@@ -12,6 +12,11 @@ variable "ami" {
   default     = "amzn2-ami-ecs-hvm-*-x86_64-ebs"
 }
 
+variable "ami_owner" {
+  description = "The owner of the AMI image."
+  default     = "amazon"
+}
+
 variable "cpu_unlimited" {
   description = "Whether or not enable t2/t3 cpu unlimited (if true, might incur additional charges)"
   default     = false

@@ -15,7 +15,7 @@ data "aws_ami" "ami" {
     values = [var.ami]
   }
 
-  owners = ["amazon"]
+  owners = [var.ami_owner]
 }
 
 data "aws_security_group" "group" {
