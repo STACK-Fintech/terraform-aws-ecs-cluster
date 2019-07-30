@@ -15,7 +15,7 @@ resource "aws_launch_template" "LT" {
 
   image_id               = data.aws_ami.ami.id
   instance_type          = var.instance_type
-  vpc_security_group_ids = [data.aws_security_group.group.id]
+  vpc_security_group_ids = var.security_groups
 
   iam_instance_profile {
     arn = aws_iam_instance_profile.ec2-instance-role.arn
