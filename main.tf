@@ -55,7 +55,8 @@ resource "aws_autoscaling_group" "ASG" {
     propagate_at_launch = true
   }
 
-  depends_on = [aws_iam_instance_profile.ec2-instance-role]
+  default_cooldown = var.default_cooldown
+  depends_on       = [aws_iam_instance_profile.ec2-instance-role]
 }
 
 resource "aws_ecs_cluster" "main" {

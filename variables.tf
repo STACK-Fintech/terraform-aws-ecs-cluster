@@ -58,3 +58,8 @@ variable "vpc_name" {
   description = "VPC name. If not set, will default to \"default\""
   default     = ""
 }
+
+variable "default_cooldown" {
+  default = 60
+  type    = number
+}
