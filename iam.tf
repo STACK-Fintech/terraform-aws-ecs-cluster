@@ -20,9 +20,9 @@ resource "aws_iam_role" "ec2-role" {
 }
 
 locals {
-  managed_roles = [
-    "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role",
-  ]
+  managed_roles = concat([
+    "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role"
+  ], var.iam_roles)
 }
 
 resource "aws_iam_role_policy_attachment" "ec2-role-attach" {

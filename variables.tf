@@ -63,3 +63,7 @@ variable "default_cooldown" {
   default = 60
   type    = number
 }
+
+variable "iam_roles" {
+  type = list(string)
+}
